@@ -48,8 +48,6 @@ describe('OneMember.vueのテスト', () => {
       props,
     });
     await wrapper.get('button').trigger('click');
-    console.log(wrapper.emitted());
-    console.log(wrapper.emitted('pointUp'));
     expect(wrapper.emitted()).toHaveProperty('pointUp');
     expect(wrapper.emitted('pointUp')).toHaveLength(1);
     expect(wrapper.emitted('pointUp')).toEqual([[props.id]]);
